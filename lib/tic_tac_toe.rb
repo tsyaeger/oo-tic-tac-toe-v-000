@@ -63,10 +63,10 @@ class TicTacToe
       current_player = current_player(board)
       move(board,ix,current_player)
       display_board(board)
-  else
-    turn(board)
+    else
+      turn(board)
+    end
   end
-end
 
 
 
