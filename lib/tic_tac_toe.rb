@@ -100,9 +100,9 @@ class TicTacToe
 
 
   
-  def won?(board)
+  def won?
     WIN_COMBINATIONS.each do |combo|
-      rw = board[combo[0]],board[combo[1]],board[combo[2]]
+      rw = @board[combo[0]],@board[combo[1]],@board[combo[2]]
       if rw.all?{|cell| cell == "X"}
         puts combo
         return combo
@@ -116,14 +116,14 @@ class TicTacToe
   
   
   
-  def full?(board)
-    return ! (board.any?{|cell| cell == " " })
+  def full?
+    return ! (@board.any?{|cell| cell == " " })
   end
   
   
   
-  def draw?(board)
-    if (won?(board) == false && full?(board) == true)
+  def draw?
+    if (won?(@board) == false && full?(@board) == true)
       puts "Cat\'s Game!"
       return true
     else
