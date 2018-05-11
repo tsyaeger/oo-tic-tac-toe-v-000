@@ -60,11 +60,12 @@ class TicTacToe
     if valid_move?(ix)
       puts "valid"  
     
-      # current_player = current_player
+      current_player = current_player
       move(ix,current_player)
       display_board
     else
       turn(board)
+      
     end
   end
 
