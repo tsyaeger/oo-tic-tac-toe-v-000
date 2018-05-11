@@ -160,18 +160,18 @@ class TicTacToe
 
 
 
-  def play(board)
+  def play
     puts "Welcome to Tic Tac Toe!"
-    display_board(board)
+    display_board()
   
-    until over?(board) == true
+    until over?() == true
       puts "not over"
-      turn(board)
+      turn()
     end
     puts "over"
   
-    winner(board)
-    draw?(board)
+    winner()
+    draw?()
   
   end
 
