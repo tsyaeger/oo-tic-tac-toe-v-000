@@ -99,6 +99,37 @@ class TicTacToe
   end
 
 
+  
+  def won?(board)
+    WIN_COMBINATIONS.each do |combo|
+      rw = board[combo[0]],board[combo[1]],board[combo[2]]
+      if rw.all?{|cell| cell == "X"}
+        puts combo
+        return combo
+      elsif rw.all?{|cell| cell == "O"}
+        puts combo
+        return combo
+      end
+    end
+    return false
+  end
+  
+  
+  
+  def full?(board)
+    return ! (board.any?{|cell| cell == " " })
+  end
+  
+  
+  
+  def draw?(board)
+    if (won?(board) == false && full?(board) == true)
+      puts "Cat\'s Game!"
+      return true
+    else
+      return false
+    end
+  end
 
 
 
