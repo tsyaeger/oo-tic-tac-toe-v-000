@@ -123,7 +123,7 @@ class TicTacToe
   
   
   def draw?
-    if (won?(@board) == false && full?(@board) == true)
+    if (won?== false && full? == true)
       puts "Cat\'s Game!"
       return true
     else
