@@ -131,6 +131,36 @@ class TicTacToe
     end
   end
 
+  
+  def over?(board)
+    if won?(board) || full?(board) || draw?(board)
+      return true
+    end
+    return false
+  end
+  
+  
+  
+  def winner(board)
+    
+    if won?(board)
+      xs = board.count("X")
+      os = board.count("O")
+  
+      if xs > os
+        puts "Congratulations X!"
+        return "X"
+      else
+        puts "Congratulations O!"
+        return "O"
+      end
+    end
+    return nil
+  end
+
+
+
+
 
 
 end
