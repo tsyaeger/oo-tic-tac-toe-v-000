@@ -144,8 +144,8 @@ class TicTacToe
   def winner
     
     if won?()
-      xs = board.count("X")
-      os = board.count("O")
+      xs = @board.count("X")
+      os = @board.count("O")
   
       if xs > os
         puts "Congratulations X!"
