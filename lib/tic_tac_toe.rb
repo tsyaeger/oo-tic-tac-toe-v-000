@@ -7,9 +7,11 @@ class TicTacToe
     @board = board
   end
   
+  
   def ix
     @ix
   end
+  
   
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
@@ -64,7 +66,6 @@ class TicTacToe
   end 
   
   
-  
   def current_player
     count = turn_count
     if count.to_f % 2 == 0 
@@ -88,11 +89,11 @@ class TicTacToe
     if valid_move?(ix)
       puts "valid"  
     
-      current_player = current_player
+      current_player = current_player()
       move(ix,current_player)
-      display_board
+      display_board()
     else
-      turn(board)
+      turn
       
     end
   end
