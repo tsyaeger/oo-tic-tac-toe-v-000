@@ -52,9 +52,9 @@ class TicTacToe
     end
 
   
-  def turn_count(board)
+  def turn_count
     t_count = 0
-    board.each do |cell|
+    @board.each do |cell|
       if cell == "X" || cell == "O"
         t_count += 1
         puts t_count
@@ -65,8 +65,8 @@ class TicTacToe
   
   
   
-  def current_player(board)
-    count = turn_count(board)
+  def current_player
+    count = turn_count
     if count.to_f % 2 == 0 
       current_player = "X"
     else
