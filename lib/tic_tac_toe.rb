@@ -7,6 +7,10 @@ class TicTacToe
     @board = board
   end
   
+  def ix
+    @ix
+  end
+  
   def display_board
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
     puts "-----------"
@@ -36,6 +40,9 @@ class TicTacToe
     @board[ix]= current_player
   end
 
+  def position_taken?(board, location)
+    board[location] != " " && @board[location] != ""
+  end
 
   
 end
