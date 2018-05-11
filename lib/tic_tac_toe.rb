@@ -51,6 +51,34 @@ class TicTacToe
     index.between?(0,8) && !position_taken?(index)
     end
 
+  
+  def turn_count(board)
+    t_count = 0
+    board.each do |cell|
+      if cell == "X" || cell == "O"
+        t_count += 1
+        puts t_count
+      end
+    end
+    return t_count
+  end 
+  
+  
+  
+  def current_player(board)
+    count = turn_count(board)
+    if count.to_f % 2 == 0 
+      current_player = "X"
+    else
+      current_player = "O"
+    end
+    return current_player
+  end
+
+
+
+
+
 
   def turn
     puts "Please enter 1-9:"
